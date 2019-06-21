@@ -4,7 +4,7 @@ class TabLink {
     this.tabElement = tabElement; 
     
     // Get the `data-tab` value from this.tabElement and store it here
-    this.tabData = this.tabElement.querySelectorAll("data-tab"); //Come back later 
+    this.tabData = this.tabElement.querySelectorAll("data-tab"); // ***** Not sure if correct ***** 
     
     // We need to find out if a user clicked 'all' cards or a specific category.  Follow the instructions below to accomplish this task:    
     
@@ -31,22 +31,26 @@ class TabLink {
   selectTab(){
 
     // Select all elements with the .tab class on them
-    // const tabs = document.querySelectorAll();
+    const tabs = document.querySelectorAll(".tabs");
     
     // Iterate through the NodeList removing the .active-tab class from each element
-    // tabs.forEach()
+    tabs.forEach(() => {
+      tabs.ClassList.remove("active-tab"); 
+    }); 
 
     // Select all of the elements with the .card class on them
-    // const cards = ;
+    const cards = document.querySelectorAll(".card"); 
 
     // Iterate through the NodeList setting the display style each one to 'none'
-    // cards.forEach()
+    cards.forEach(() => {
+      cards.style.display("none"); // ***** Not sure if correct *****
+    }); 
     
     // Add a class of ".active-tab" to this.tabElement
-    // this.tabElement;
+    this.tabElement = document.querySelector(".active-tab"); 
   
     // Notice we are looping through the this.cards array and invoking selectCard() from the TabCard class. Just un-comment the code and study what is happening here.
-    // this.cards.forEach(card => card.selectCard());
+    this.cards.forEach(card => card.selectCard());
   }
 }
 
