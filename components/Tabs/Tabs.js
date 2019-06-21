@@ -47,7 +47,7 @@ class TabLink {
     }); 
     
     // Add a class of ".active-tab" to this.tabElement
-    this.tabElement = document.querySelector(".active-tab"); 
+    this.tabElement.ClassList.add(".active-tab"); 
   
     // Notice we are looping through the this.cards array and invoking selectCard() from the TabCard class. Just un-comment the code and study what is happening here.
     this.cards.forEach(card => card.selectCard());
@@ -57,11 +57,11 @@ class TabLink {
 class TabCard {
   constructor(cardElement){
     // Assign this.cardElement to the cardElement DOM reference
-    // this.cardElement;
+    this.cardElement = cardElement; 
   }
   selectCard(){
     // Update the style of this.cardElement to display = "flex"
-    // this.cardElement;
+    this.cardElement.style.display = "flex"; 
   }
 
 }
