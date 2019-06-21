@@ -4,7 +4,7 @@ class TabLink {
     this.tabElement = tabElement; 
     
     // Get the `data-tab` value from this.tabElement and store it here
-    this.tabData = this.tabElement.querySelectorAll("data-tab"); // ***** Not sure if correct ***** 
+    this.tabData = this.tabElement.dataset.tab; 
     
     // We need to find out if a user clicked 'all' cards or a specific category.  Follow the instructions below to accomplish this task:    
     
@@ -43,7 +43,7 @@ class TabLink {
 
     // Iterate through the NodeList setting the display style each one to 'none'
     cards.forEach(() => {
-      cards.style.display("none"); // ***** Not sure if correct *****
+      card.style.display = "none" 
     }); 
     
     // Add a class of ".active-tab" to this.tabElement
